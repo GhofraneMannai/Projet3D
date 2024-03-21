@@ -35,12 +35,14 @@ const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
 var mtlLoader = new MTLLoader();
-mtlLoader.load("../.OBJ/Room.mtl", function (materials) {
+mtlLoader.load("../.OBJ/obj1.mtl", function (materials) {
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
-  objLoader.load("../.OBJ/Room.obj", function (object) {
+  objLoader.load("../.OBJ/obj1.obj", function (object) {
+    object.scale.set(0.03, 0.03, 0.01);
+    object.position.set(10, 2, -19);
     scene.add(object);
   });
 });
@@ -67,7 +69,7 @@ textureLoader.load(
 
     // Then you can use this material to create a mesh
     // Assuming you have geometry for the floor
-    const floorGeometry = new THREE.PlaneGeometry(50, 50); // Example size
+    const floorGeometry = new THREE.PlaneGeometry(100, 100); // Example size
     const floorMesh = new THREE.Mesh(floorGeometry, floorMaterial);
 
     floorMesh.rotation.x = Math.PI / 2;
@@ -87,20 +89,20 @@ const wallgroup = new THREE.Group();
 scene.add(wallgroup);
 const textureWall = textureLoader.load("/img/wall.jpg");
 const frontwall = new THREE.Mesh(
-  new THREE.BoxGeometry(50, 20, 0.001),
+  new THREE.BoxGeometry(100, 20, 0.001),
   new THREE.MeshBasicMaterial({ map: textureWall })
 );
 frontwall.position.z = -20;
 
 const leftwall = new THREE.Mesh(
-  new THREE.BoxGeometry(50, 20, 0.001),
+  new THREE.BoxGeometry(100, 20, 0.001),
   new THREE.MeshBasicMaterial({ map: textureWall })
 );
 leftwall.rotation.y = Math.PI / 2;
 leftwall.position.x = -20;
 
 const rightwall = new THREE.Mesh(
-  new THREE.BoxGeometry(50, 20, 0.001),
+  new THREE.BoxGeometry(100, 20, 0.001),
   new THREE.MeshBasicMaterial({ map: textureWall })
 );
 rightwall.rotation.y = Math.PI / 2;
@@ -110,7 +112,7 @@ wallgroup.add(frontwall, leftwall, rightwall);
 
 //ceiling
 
-const ceilingGeometry = new THREE.PlaneGeometry(50, 50); // Corrected class name
+const ceilingGeometry = new THREE.PlaneGeometry(100, 100); // Corrected class name
 const ceilingMat = new THREE.MeshBasicMaterial({ map: textureWall });
 ceilingMat.receiveShadow = true; // Enable receiving shadows
 const ceilingplane = new THREE.Mesh(ceilingGeometry, ceilingMat);

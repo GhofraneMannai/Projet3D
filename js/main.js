@@ -73,15 +73,15 @@ textureLoader.load(
 
 const wallgroup= new THREE.Group() ;
 scene.add(wallgroup)
-
-const frontwall = new THREE.Mesh(new THREE.BoxGeometry(50,20,0.001), new THREE.MeshBasicMaterial({color:"green"}));
+const textureWall=textureLoader.load("/img/wall.jpg");
+const frontwall = new THREE.Mesh(new THREE.BoxGeometry(50,20,0.001), new THREE.MeshBasicMaterial({map:textureWall}));
 frontwall.position.z=-20
 
-const leftwall = new THREE.Mesh(new THREE.BoxGeometry(50,20,0.001), new THREE.MeshBasicMaterial({color:"red"}));
+const leftwall = new THREE.Mesh(new THREE.BoxGeometry(50,20,0.001), new THREE.MeshBasicMaterial({map:textureWall}));
 leftwall.rotation.y=Math.PI/2;
 leftwall.position.x=-20
 
-const rightwall = new THREE.Mesh(new THREE.BoxGeometry(50,20,0.001), new THREE.MeshBasicMaterial({color:"yellow"}));
+const rightwall = new THREE.Mesh(new THREE.BoxGeometry(50,20,0.001), new THREE.MeshBasicMaterial({map:textureWall}));
 rightwall.rotation.y=Math.PI/2;
 rightwall.position.x=20
 
@@ -90,7 +90,8 @@ wallgroup.add(frontwall,leftwall,rightwall)
 //ceiling
 
 const ceilingGeometry = new THREE.PlaneGeometry(50, 50); // Corrected class name
-const ceilingMat = new THREE.MeshBasicMaterial({ color: "blue" });
+const ceilingMat = new THREE.MeshBasicMaterial({ map:textureWall});
+ceilingMat.receiveShadow = true; // Enable receiving shadows
 const ceilingplane = new THREE.Mesh(ceilingGeometry, ceilingMat);
 scene.add(ceilingplane);
 scene.add(ceilingplane);
@@ -117,7 +118,7 @@ const painting1=createpainting("/artwork/0.jpg",10,5,new THREE.Vector3(10,5,-19.
 const painting2=createpainting("/artwork/1.jpg",10,5,new THREE.Vector3(-10,5,-19.99))
 scene.add(painting1,painting2)
 
-
+//souris
 const controllers=new PointerLockControls(camera,document.body);
 function startExperience(){
     controllers.lock();
@@ -141,10 +142,10 @@ controllers.addEventListener("unlock",showMenu)
 function onkeydown(event)
 {
     let keycode=event.which || event.keyCode ;
-    if (keycode ==39 ) { camera.translateX(-0.05) ; }
-    else if (keycode==37 ){camera.translateX(0.05) ;}
-    else if (keycode==38 ){camera.translateY(-0.05) ;}
-    else if (keycode==40 ){camera.translateY(0.05) ;}
+    if (keycode ==39 || keycode==68) { controllers.moveRight(0.08) ; }
+    else if (keycode==37 || keycode==65){controllers.moveRight(-0.08) ; }
+    else if (keycode==38 || keycode==87){controllers.moveForward(0.08) ;}
+    else if (keycode==40 || keycode==83){controllers.moveForward(-0.08);}
 }
 
 

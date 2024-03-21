@@ -17,21 +17,21 @@ renderer.setClearColor(0xfffff, 1); //bachground color
 document.body.appendChild(renderer.domElement); //add the renderer to our html
 
 //ambient Light
-let ambientLight = new THREE.AmbientLight(0x101010, 1.0) //color , intensity , distance , decay
+const ambientLight = new THREE.AmbientLight(0x101010, 1.0) //color , intensity , distance , decay
 ambientLight.position.copy(camera.position);
 scene.add(ambientLight)
 
 
 //Directionnal Light
-let sunLight = new THREE.DirectionalLight(0xdddd , 1.0); //color , intensity
+const sunLight = new THREE.DirectionalLight(0xdddd , 1.0); //color , intensity
 sunLight.position.y=15;
 scene.add(sunLight);
 
 
 
-let geometry = new THREE.BoxGeometry(1, 1, 1)  //BoxGeometry is the shape of the object
-let  material = new THREE.MeshBasicMaterial({ color: 'grey'}); //color of the object
-let cube = new THREE.Mesh(geometry, material);  
+const geometry = new THREE.BoxGeometry(1, 1, 1)  //BoxGeometry is the shape of the object
+const  material = new THREE.MeshBasicMaterial({ color: 'grey'}); //color of the object
+const cube = new THREE.Mesh(geometry, material);  
 scene.add(cube);
 //controlers
 document.addEventListener('keydown', onkeydown , false);
@@ -68,11 +68,35 @@ textureLoader.load(
 
 
 
+//wall
 
+const wallgroup= new THREE.Group() ;
+scene.add(wallgroup)
 
+const frontwall = new THREE.Mesh(new THREE.BoxGeometry(50,20,0.001), new THREE.MeshBasicMaterial({color:"green"}));
+frontwall.position.z=-20
+
+const leftwall = new THREE.Mesh(new THREE.BoxGeometry(50,20,0.001), new THREE.MeshBasicMaterial({color:"red"}));
+leftwall.rotation.y=Math.PI/2;
+leftwall.position.x=-20
+
+const rightwall = new THREE.Mesh(new THREE.BoxGeometry(50,20,0.001), new THREE.MeshBasicMaterial({color:"yellow"}));
+rightwall.rotation.y=Math.PI/2;
+rightwall.position.x=20
+
+wallgroup.add(frontwall,leftwall,rightwall)
+
+//ceiling
+
+const ceilingGeometry = new THREE.PlaneGeometry(50, 50); // Corrected class name
+const ceilingMat = new THREE.MeshBasicMaterial({ color: "blue" });
+const ceilingplane = new THREE.Mesh(ceilingGeometry, ceilingMat);
+scene.add(ceilingplane);
+scene.add(ceilingplane);
+ceilingplane.rotation.x=Math.PI/2;
+ceilingplane.position.y=10;
 
 //create the floor and added to the scene
-
 function onkeydown(event)
 {
     let keycode=event.which || event.keyCode ;

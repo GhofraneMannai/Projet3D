@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { PointerLockControls } from 'three/examples/jsm/controls/PointerLockControls';
 
 const scene = new THREE.Scene();
 const camera=new THREE.PerspectiveCamera(
@@ -96,6 +97,46 @@ scene.add(ceilingplane);
 ceilingplane.rotation.x=Math.PI/2;
 ceilingplane.position.y=10;
 
+// for(let i = 0 ; i<wallgroup.children.length ;  i++)
+// {
+//     wallgroup.children[i].BBox=new THREE.Box3();
+//     wallgroup.childreen[i].BBox.setFromObject(wallgroup.children[i]);
+// }
+
+function createpainting(imageURL,width,heigh,position)
+{
+    const textureLoader=new THREE.TextureLoader();
+    const paintingTexture=textureLoader.load(imageURL);
+    const material=new THREE.MeshBasicMaterial({map:paintingTexture});
+    const geometry=new THREE.PlaneGeometry(width,heigh);
+    const painting=new THREE.Mesh(geometry,material);
+    painting.position.set(position.x,position.y,position.z);
+    return painting
+}
+const painting1=createpainting("/artwork/0.jpg",10,5,new THREE.Vector3(10,5,-19.99));
+const painting2=createpainting("/artwork/1.jpg",10,5,new THREE.Vector3(-10,5,-19.99))
+scene.add(painting1,painting2)
+
+
+const controllers=new PointerLockControls(camera,document.body);
+function startExperience(){
+    controllers.lock();
+    hideMenu()
+}
+
+const playButton=document.getElementById("play_button");
+function hideMenu()
+{
+    const menu=document.getElementById("menu");
+    menu.style.display='none'
+}
+function showMenu()
+{
+    const menu=document.getElementById("menu");
+    menu.style.display='block'
+}
+playButton.addEventListener("click",startExperience)
+controllers.addEventListener("unlock",showMenu)
 //create the floor and added to the scene
 function onkeydown(event)
 {

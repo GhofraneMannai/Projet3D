@@ -246,6 +246,76 @@ mtlLoader.load("../.OBJ/shoe.mtl", function (materials) {
     scene.add(object);
   });
 });
+
+
+
+
+//////////////////////////////////////////////////////4
+var mtlLoader = new MTLLoader();
+mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
+  console.log("Materials loaded:", materials); // Check for successful loading
+
+  materials.preload();
+
+  var objLoader = new OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.load("../.OBJ/crate1.obj", function (object) {
+    console.log("Object loaded:", object); // Check for successful loading
+
+    // Adjust size and position
+    object.scale.set(2, 2, 2);
+    object.position.set(20, -1.1, -18);
+    object.rotateX(Math.PI / 2);
+    object.rotateY(Math.PI);
+
+    // Add lights (optional)
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    scene.add(ambientLight);
+
+    // Add directional light (optional)
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+    directionalLight.position.set(5, 10, 3); // Adjust light position
+    scene.add(directionalLight);
+
+    // Add the object to the scene
+    scene.add(object);
+  });
+});
+
+var mtlLoader = new MTLLoader();
+mtlLoader.load("../.OBJ/117_shoe_v1_L3.mtl", function (materials) {
+  console.log("Materials loaded:", materials); // Check for successful loading
+
+  materials.preload();
+
+  var objLoader = new OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.load("../.OBJ/117_shoe_v1_L3.obj", function (object) {
+    console.log("Object loaded:", object); // Check for successful loading
+
+    // Adjust size and position
+    object.scale.set(0.13, 0.13, 0.13);
+    object.position.set(20, 0.7, -18);
+    object.rotateX(Math.PI/2);
+    object.rotateY(Math.PI);
+    object.rotateZ(Math.PI);
+
+    // Add lights (optional)
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    scene.add(ambientLight);
+
+    // Add directional light (optional)
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+    directionalLight.position.set(5, 10, 3); // Adjust light position
+    scene.add(directionalLight);
+
+    // Add the object to the scene
+    scene.add(object);
+  });
+});
+
+
+
 //////////////////////////////////////////////////////4
 
 var mtlLoader = new MTLLoader();

@@ -13,54 +13,51 @@ const camera = new THREE.PerspectiveCamera(
 
 scene.add(camera);
 camera.position.z = 5;
+camera.position.y += 3;
+
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0xfffff, 1); //bachground color
 document.body.appendChild(renderer.domElement); //add the renderer to our html
 
-//ambient Light
-const ambientLight = new THREE.AmbientLight(0x101010, 1.0); //color , intensity , distance , decay
-ambientLight.position.copy(camera.position);
-scene.add(ambientLight);
-
-//Directionnal Light
-const sunLight = new THREE.DirectionalLight(0xdddd, 1.0); //color , intensity
-sunLight.position.y = 15;
-scene.add(sunLight);
-
+// Créer les lumières une seule fois et les réutiliser
+const ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Lumière ambiante douce blanche
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // Lumière directionnelle blanche
+directionalLight.position.set(5, 10, 3);
+scene.add(ambientLight, directionalLight);
 const geometry = new THREE.BoxGeometry(1, 1, 1); //BoxGeometry is the shape of the object
 const material = new THREE.MeshBasicMaterial({ color: "grey" }); //color of the object
 const cube = new THREE.Mesh(geometry, material);
 
+// var mtlLoader = new MTLLoader();
+// mtlLoader.load("../.OBJ/Boxes.mlt", function (materials) {
+//   materials.preload();
 
-var mtlLoader = new MTLLoader();
-mtlLoader.load("../.OBJ/interiorTest.mlt", function (materials) {
-  materials.preload();
+//   var objLoader = new OBJLoader();
+//   objLoader.setMaterials(materials);
+//   objLoader.load("../.OBJ/Boxes.obj", function (object) {
+//     // Créer un matériau rouge
+//     const redMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 }); // Rouge pur
 
-  var objLoader = new OBJLoader();
-  objLoader.setMaterials(materials);
-  objLoader.load("../.OBJ/interiorTest.obj", function (object) {
-    // Créer un matériau rouge
-    const redMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 }); // Rouge pur
+//     // Appliquer le matériau rouge à tous les meshes de l'objet
+//     object.traverse(function (child) {
+//       if (child instanceof THREE.Mesh) {
+//         child.material = redMaterial;
+//       }
+//     });
 
-    // Appliquer le matériau rouge à tous les meshes de l'objet
-    object.traverse(function (child) {
-      if (child instanceof THREE.Mesh) {
-        child.material = redMaterial;
-      }
-    });
+//     // Ajuster la taille et la position de l'objet
+//     //object.scale.set(1, 1, 1);
+//     object.position.set(10, -2.5, -19);
 
-    // Ajuster la taille et la position de l'objet
-    object.scale.set(1, 1, 1);
-    object.position.set(10, -2.5, -19);
+//     // Ajouter l'objet à la scène
+//     scene.add(object);
+//   });
+// });
+// // scene.add(cube);
 
-    // Ajouter l'objet à la scène
-    scene.add(object);
-  });
-});
-// scene.add(cube);
-
+//////////////////////////////////////////////1
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
   console.log("Materials loaded:", materials); // Check for successful loading
@@ -74,7 +71,71 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
 
     // Adjust size and position
     object.scale.set(2, 2, 2);
-    object.position.set(-10, -1.1, -19);
+    object.position.set(10, -1.1, -18);
+    object.rotateX(Math.PI / 2);
+    object.rotateY(Math.PI);
+
+    // Add lights (optional)
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    scene.add(ambientLight);
+
+    // Add directional light (optional)
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+    directionalLight.position.set(5, 10, 3); // Adjust light position
+    scene.add(directionalLight);
+
+    // Add the object to the scene
+    scene.add(object);
+  });
+});
+
+/////////////////////////////////////////////////2
+var mtlLoader = new MTLLoader();
+mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
+  console.log("Materials loaded:", materials); // Check for successful loading
+
+  materials.preload();
+
+  var objLoader = new OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.load("../.OBJ/crate1.obj", function (object) {
+    console.log("Object loaded:", object); // Check for successful loading
+
+    // Adjust size and position
+    object.scale.set(2, 2, 2);
+    object.position.set(0, -1.1, -18);
+    object.rotateX(Math.PI / 2);
+    object.rotateY(Math.PI);
+
+    // Add lights (optional)
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    scene.add(ambientLight);
+
+    // Add directional light (optional)
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+    directionalLight.position.set(5, 10, 3); // Adjust light position
+    scene.add(directionalLight);
+
+    // Add the object to the scene
+    scene.add(object);
+  });
+});
+
+//////////////////////////////////////////////////////3
+var mtlLoader = new MTLLoader();
+mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
+  console.log("Materials loaded:", materials); // Check for successful loading
+
+  materials.preload();
+
+  var objLoader = new OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.load("../.OBJ/crate1.obj", function (object) {
+    console.log("Object loaded:", object); // Check for successful loading
+
+    // Adjust size and position
+    object.scale.set(2, 2, 2);
+    object.position.set(-10, -1.1, -18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 

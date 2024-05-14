@@ -30,32 +30,6 @@ const geometry = new THREE.BoxGeometry(1, 1, 1); //BoxGeometry is the shape of t
 const material = new THREE.MeshBasicMaterial({ color: "grey" }); //color of the object
 const cube = new THREE.Mesh(geometry, material);
 
-// var mtlLoader = new MTLLoader();
-// mtlLoader.load("../.OBJ/Boxes.mlt", function (materials) {
-//   materials.preload();
-
-//   var objLoader = new OBJLoader();
-//   objLoader.setMaterials(materials);
-//   objLoader.load("../.OBJ/Boxes.obj", function (object) {
-//     // Créer un matériau rouge
-//     const redMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 }); // Rouge pur
-
-//     // Appliquer le matériau rouge à tous les meshes de l'objet
-//     object.traverse(function (child) {
-//       if (child instanceof THREE.Mesh) {
-//         child.material = redMaterial;
-//       }
-//     });
-
-//     // Ajuster la taille et la position de l'objet
-//     //object.scale.set(1, 1, 1);
-//     object.position.set(10, -2.5, -19);
-
-//     // Ajouter l'objet à la scène
-//     scene.add(object);
-//   });
-// });
-// // scene.add(cube);
 
 //////////////////////////////////////////////1
 var mtlLoader = new MTLLoader();
@@ -378,7 +352,6 @@ mtlLoader.load("../.OBJ/11741_shoes_v1_l2.mtl", function (materials) {
   });
 });
 
-
 //////////////////////////////////////////////////////6
 
 var mtlLoader = new MTLLoader();
@@ -472,14 +445,14 @@ const leftwall = new THREE.Mesh(
   new THREE.MeshBasicMaterial({ map: textureWall })
 );
 leftwall.rotation.y = Math.PI / 2;
-leftwall.position.x = -50;
+leftwall.position.x = -30;
 
 const rightwall = new THREE.Mesh(
   new THREE.BoxGeometry(100, 20, 0.001),
   new THREE.MeshBasicMaterial({ map: textureWall })
 );
 rightwall.rotation.y = Math.PI / 2;
-rightwall.position.x = 50;
+rightwall.position.x = 30;
 
 wallgroup.add(frontwall, leftwall, rightwall, front2wall);
 
@@ -541,6 +514,47 @@ function showMenu() {
 }
 playButton.addEventListener("click", startExperience);
 controllers.addEventListener("unlock", showMenu);
+
+
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+function onMouseMove(event) {
+  // Calculer la position de la souris en coordonnées normalisées (-1 à +1)
+  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+  // Mettre à jour le raycaster avec la position de la caméra et de la souris
+  raycaster.setFromCamera(mouse, camera);
+  
+  // Calculer les objets intersectés
+  const intersects = raycaster.intersectObjects(scene.children, true);
+
+  if (intersects.length > 0) {
+      const firstObject = intersects[0].object;
+      showInfoBanner(firstObject);
+  } else {
+      hideInfoBanner();
+  }
+}
+
+// window.addEventListener('mousemove', onMouseMove);
+
+// function showInfoBanner(object) {
+//   const infoBanner = document.getElementById('infoBanner');
+//   const infoText = document.getElementById('infoText');
+//   // Mettre à jour le texte en fonction de l'objet, vous pouvez customiser cela
+//   infoText.innerHTML = `Object: ${object.name} <br> Description: Details about the object here`;
+//   infoBanner.style.display = 'block';
+// }
+
+// function hideInfoBanner() {
+//   const infoBanner = document.getElementById('infoBanner');
+//   infoBanner.style.display = 'none';
+// }
+
+
+
 //create the floor and added to the scene
 function onkeydown(event) {
   let keycode = event.which || event.keyCode;

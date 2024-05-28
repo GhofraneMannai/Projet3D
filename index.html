@@ -5,21 +5,24 @@
 
     <title>3D Art Gallery</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
     <div id="menu">
       <div id="img_container">
-        <img src="img/starrynight.jpg" alt="starry night" />
+        <div id="starry_night_bg"></div>
       </div>
       <div id="content_container">
         <div id="content">
           <div class="title">
-            <h1>3D Art Gallery</h1>
+            <h1>Shoes Shop</h1>
           </div>
           <div class="title-info">
-            <p>Welcome to an immersive 3D Art Gallery experience.</p>
+            <p>
+              Welcome to our virtual Shoes Shop .Here, you can navigate through a
+              variety of wonderful shop and learn about the articles.
+            </p>
             <p>
               Wander through the virtual gallery halls, and engage with a
               variety of masterpieces, learning about their history and
@@ -43,11 +46,10 @@
 
     <div id="about-overlay">
       <button id="close-about">X</button>
-      <h1>About the 3D Art Gallery</h1>
+      <h1>Shoes Shop</h1>
       <p>
-        Welcome to our virtual 3D Art Gallery. Here, you can navigate through a
-        variety of wonderful artworks and learn about their history and
-        significance.
+        Welcome to our virtual Shoes Shop .Here, you can navigate through a
+        variety of wonderful shop and learn about the articles.
       </p>
       <p>
         This project is brought to you by Emilian Kasemi. We believe in the
@@ -64,35 +66,8 @@
       </p>
     </div>
 
-    <div id="info-panel">
-      <div id="info-header">
-        <h3>Controls</h3>
-        <button id="toggle-info">Hide</button>
-      </div>
-      <div id="info-content">
-        <p><b>W/A/S/D:</b> Move around</p>
-        <p><b>Mouse:</b> Look around</p>
-        <p><b>Space:</b> Toggle pointer lock</p>
-        <p><b>M:</b> Show Menu</p>
-        <p><b>Enter:</b> Start exploration</p>
-        <p><b>Esc:</b> Stop exploration</p>
-        <p><b>G:</b> Start audio guide</p>
-        <p><b>P:</b> Stop audio guide</p>
-      </div>
-    </div>
-
-    <div id="audio_controls">
-      <button id="start_audio">Start Audio Guide</button>
-      <button id="stop_audio">Stop Audio Guide</button>
-    </div>
-
-    <div id="infoBanner" style="display:none; position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); background: white; padding: 10px; border-radius: 8px; z-index: 100;">
-      <p id="infoText">Details here</p>
-  </div>
-
     <div id="painting-info"></div>
-    
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
   </body>
 </html>

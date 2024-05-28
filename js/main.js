@@ -795,6 +795,144 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
   });
 });
 
+
+
+//////////////////////////////////////////////////////table1
+var mtlLoader = new MTLLoader();
+mtlLoader.load("../img/Wood_Table.mtl", function (materials) {
+  console.log("Materials loaded:", materials); // Check for successful loading
+
+  materials.preload();
+
+  var objLoader = new OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.load("../img/Wood_Table.obj", function (object) {
+    console.log("Object loaded:", object); // Check for successful loading
+
+    // Adjust size and position
+    object.scale.set(10,10, 12);
+    object.position.set(16, -4, 1);
+    object.rotateX(Math.PI );
+    object.rotateY(Math.PI);
+    object.rotateZ(Math.PI);
+    // Add lights (optional)
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    scene.add(ambientLight);
+
+    // Add directional light (optional)
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+    directionalLight.position.set(5, 10, 3); // Adjust light position
+    scene.add(directionalLight);
+
+    // Add the object to the scene
+    scene.add(object);
+  });
+});
+
+
+
+//////////////////////////////////////////////////////backet1
+var mtlLoader = new MTLLoader();
+mtlLoader.load("../.OBJ/shoes-box-003.mtl", function (materials) {
+  console.log("Materials loaded:", materials); // Check for successful loading
+
+  materials.preload();
+
+  var objLoader = new OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.load("../.OBJ/shoes-box-003.obj", function (object) {
+    console.log("Object loaded:", object); // Check for successful loading
+
+    // Adjust size and position
+    object.scale.set(10,10, 12);
+    object.position.set(16, 6, 1);
+    object.rotateX(Math.PI );
+    object.rotateY(Math.PI /2);
+  
+    // Add lights (optional)
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    scene.add(ambientLight);
+
+    // Add directional light (optional)
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+    directionalLight.position.set(5, 10, 3); // Adjust light position
+    scene.add(directionalLight);
+
+    // Add the object to the scene
+    scene.add(object);
+  });
+});
+
+
+
+//////////////////////////////////////////////////////table2
+var mtlLoader = new MTLLoader();
+mtlLoader.load("../img/Wood_Table.mtl", function (materials) {
+  console.log("Materials loaded:", materials); // Check for successful loading
+
+  materials.preload();
+
+  var objLoader = new OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.load("../img/Wood_Table.obj", function (object) {
+    console.log("Object loaded:", object); // Check for successful loading
+
+    // Adjust size and position
+    object.scale.set(10,10, 12);
+    object.position.set(10, -4, 1);
+    object.rotateX(Math.PI );
+    object.rotateY(Math.PI);
+    object.rotateZ(Math.PI);
+    // Add lights (optional)
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    scene.add(ambientLight);
+
+    // Add directional light (optional)
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+    directionalLight.position.set(5, 10, 3); // Adjust light position
+    scene.add(directionalLight);
+
+    // Add the object to the scene
+    scene.add(object);
+  });
+});
+
+
+
+
+//////////////////////////////////////////////////////table4
+var mtlLoader = new MTLLoader();
+mtlLoader.load("../img/Wood_Table.mtl", function (materials) {
+  console.log("Materials loaded:", materials); // Check for successful loading
+
+  materials.preload();
+
+  var objLoader = new OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.load("../img/Wood_Table.obj", function (object) {
+    console.log("Object loaded:", object); // Check for successful loading
+
+    // Adjust size and position
+    object.scale.set(10,10, 12);
+    object.position.set(5, -4, 1);
+    object.rotateX(Math.PI );
+    object.rotateY(Math.PI);
+    object.rotateZ(Math.PI);
+    // Add lights (optional)
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    scene.add(ambientLight);
+
+    // Add directional light (optional)
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+    directionalLight.position.set(5, 10, 3); // Adjust light position
+    scene.add(directionalLight);
+
+    // Add the object to the scene
+    scene.add(object);
+  });
+});
+
+
 //////////////////////////////////////////////////////desk
 
 var mtlLoader = new MTLLoader();
@@ -810,7 +948,7 @@ mtlLoader.load("../.OBJ/Desk.mtl", function (materials) {
 
     // Adjust size and position
     object.scale.set(10, 10, 10);
-    object.position.set(-30, -1.1, -12);
+    object.position.set(-30, -1.1, 7);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI / 2);
@@ -828,6 +966,41 @@ mtlLoader.load("../.OBJ/Desk.mtl", function (materials) {
     scene.add(object);
   });
 });
+
+//////////////////////////////////////////////////////desk
+
+var mtlLoader = new MTLLoader();
+mtlLoader.load("../.OBJ/Humano_01Business_01_30K.mtl", function (materials) {
+  console.log("Materials loaded:", materials); // Check for successful loading
+
+  materials.preload();
+
+  var objLoader = new OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.load("../.OBJ/Humano_01Business_01_30K.obj", function (object) {
+    console.log("Object loaded:", object); // Check for successful loading
+
+    // Adjust size and position
+    object.scale.set(-50, -50, -50);
+    object.position.set(-30, 2, 7);
+    object.rotateX(Math.PI / 2);
+    object.rotateY(Math.PI);
+    object.rotateZ(Math.PI / 2);
+
+    // Add lights (optional)
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    scene.add(ambientLight);
+
+    // Add directional light (optional)
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+    directionalLight.position.set(5, 10, 3); // Adjust light position
+    scene.add(directionalLight);
+
+    // Add the object to the scene
+    scene.add(object);
+  });
+});
+
 //controlers
 document.addEventListener("keydown", onkeydown, false);
 
@@ -887,7 +1060,7 @@ const leftwall = new THREE.Mesh(
   new THREE.MeshBasicMaterial({ map: textureWall })
 );
 leftwall.rotation.y = Math.PI / 2;
-leftwall.position.x = -30;
+leftwall.position.x = -35;
 
 const rightwall = new THREE.Mesh(
   new THREE.BoxGeometry(100, 20, 0.001),

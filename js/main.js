@@ -15,7 +15,6 @@ scene.add(camera);
 camera.position.z = 5;
 camera.position.y += 3;
 
-
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0xfffff, 1); //bachground color
@@ -29,7 +28,6 @@ scene.add(ambientLight, directionalLight);
 const geometry = new THREE.BoxGeometry(1, 1, 1); //BoxGeometry is the shape of the object
 const material = new THREE.MeshBasicMaterial({ color: "grey" }); //color of the object
 const cube = new THREE.Mesh(geometry, material);
-
 
 //////////////////////////////////////////////1
 var mtlLoader = new MTLLoader();
@@ -142,7 +140,6 @@ mtlLoader.load("../.OBJ/11743_Soccer_Shoes_v1_l3.mtl", function (materials) {
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-
     // Add lights (optional)
     var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
     scene.add(ambientLight);
@@ -156,7 +153,6 @@ mtlLoader.load("../.OBJ/11743_Soccer_Shoes_v1_l3.mtl", function (materials) {
     scene.add(object);
   });
 });
-
 
 //////////////////////////////////////////////////////3
 var mtlLoader = new MTLLoader();
@@ -205,7 +201,6 @@ mtlLoader.load("../.OBJ/shoe.mtl", function (materials) {
     object.scale.set(0.07, 0.07, 0.07);
     object.position.set(9.5, 0.8, -16);
     object.rotateY(Math.PI);
-   
 
     // Add lights (optional)
     var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
@@ -220,9 +215,6 @@ mtlLoader.load("../.OBJ/shoe.mtl", function (materials) {
     scene.add(object);
   });
 });
-
-
-
 
 //////////////////////////////////////////////////////4
 var mtlLoader = new MTLLoader();
@@ -270,7 +262,7 @@ mtlLoader.load("../.OBJ/117_shoe_v1_L3.mtl", function (materials) {
     // Adjust size and position
     object.scale.set(0.13, 0.13, 0.13);
     object.position.set(20, 0.7, -18);
-    object.rotateX(Math.PI/2);
+    object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI);
 
@@ -334,7 +326,7 @@ mtlLoader.load("../.OBJ/11741_shoes_v1_l2.mtl", function (materials) {
     // Adjust size and position
     object.scale.set(0.3, 0.3, 0.3);
     object.position.set(-20, 1, -18);
-    object.rotateX(Math.PI/2);
+    object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI);
 
@@ -351,8 +343,6 @@ mtlLoader.load("../.OBJ/11741_shoes_v1_l2.mtl", function (materials) {
     scene.add(object);
   });
 });
-
-
 
 //kids
 //////////////////////////////////////////////////////6
@@ -401,9 +391,9 @@ mtlLoader.load("../.OBJ/13642_Polo_Boots_v1_L2.mtl", function (materials) {
     // Adjust size and position
     object.scale.set(0.07, 0.07, 0.07);
     object.position.set(27, 1, 15.5);
-    object.rotateX(Math.PI/2);
+    object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
-    object.rotateZ(Math.PI/2);
+    object.rotateZ(Math.PI / 2);
 
     // Add lights (optional)
     var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
@@ -418,8 +408,6 @@ mtlLoader.load("../.OBJ/13642_Polo_Boots_v1_L2.mtl", function (materials) {
     scene.add(object);
   });
 });
-
-
 
 //////////////////////////////////////////////////////7
 var mtlLoader = new MTLLoader();
@@ -453,7 +441,6 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
   });
 });
 
-
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/12311_Boots_v2_l3.mtl", function (materials) {
   console.log("Materials loaded:", materials); // Check for successful loading
@@ -485,11 +472,6 @@ mtlLoader.load("../.OBJ/12311_Boots_v2_l3.mtl", function (materials) {
     scene.add(object);
   });
 });
-
-
-
-
-
 
 //////////////////////////////////////////////////////8
 var mtlLoader = new MTLLoader();
@@ -583,13 +565,6 @@ mtlLoader.load("../.OBJ/10148_RubberRainBoot_v02_L3.mtl", function (materials) {
   });
 });
 
-
-
-
-
-
-
-
 //////////////////////////////////////////////////////9
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
@@ -604,7 +579,7 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
 
     // Adjust size and position
     object.scale.set(2, 2, 2);
-    object.position.set(28, -1,6);
+    object.position.set(28, -1, 6);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
@@ -635,7 +610,7 @@ mtlLoader.load("../.OBJ/12309_boots_v1_l2.mtl", function (materials) {
 
     // Adjust size and position
     object.scale.set(0.17, 0.17, 0.17);
-    object.position.set(28, 1,6);
+    object.position.set(28, 1, 6);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI / 2);
@@ -653,12 +628,7 @@ mtlLoader.load("../.OBJ/12309_boots_v1_l2.mtl", function (materials) {
   });
 });
 
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////
-
-
-
 
 //////////////////////////////////////////////////////10
 var mtlLoader = new MTLLoader();
@@ -693,37 +663,41 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
 });
 
 var mtlLoader = new MTLLoader();
-mtlLoader.load("../.OBJ/Boots Elegance Shoes N301122.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+mtlLoader.load(
+  "../.OBJ/Boots Elegance Shoes N301122.mtl",
+  function (materials) {
+    console.log("Materials loaded:", materials); // Check for successful loading
 
-  materials.preload();
+    materials.preload();
 
-  var objLoader = new OBJLoader();
-  objLoader.setMaterials(materials);
-  objLoader.load("../.OBJ/Boots Elegance Shoes N301122.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    var objLoader = new OBJLoader();
+    objLoader.setMaterials(materials);
+    objLoader.load(
+      "../.OBJ/Boots Elegance Shoes N301122.obj",
+      function (object) {
+        console.log("Object loaded:", object); // Check for successful loading
 
-    // Adjust size and position
-    object.scale.set(1, 1, 1);
-    object.position.set(30, 1.1, 18);
-    object.rotateX(Math.PI / 2);
-    object.rotateY(Math.PI);
-    object.rotateZ(Math.PI / 2);
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
-    scene.add(ambientLight);
+        // Adjust size and position
+        object.scale.set(1, 1, 1);
+        object.position.set(30, 1.1, 18);
+        object.rotateX(Math.PI / 2);
+        object.rotateY(Math.PI);
+        object.rotateZ(Math.PI / 2);
+        // Add lights (optional)
+        var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+        scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
-    scene.add(directionalLight);
+        // Add directional light (optional)
+        var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+        directionalLight.position.set(5, 10, 3); // Adjust light position
+        scene.add(directionalLight);
 
-    // Add the object to the scene
-    scene.add(object);
-  });
-});
-
-
+        // Add the object to the scene
+        scene.add(object);
+      }
+    );
+  }
+);
 
 //////////////////////////////////////////////////////11
 var mtlLoader = new MTLLoader();
@@ -757,11 +731,6 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
   });
 });
 
-
-
-
-
-
 //////////////////////////////////////////////////////12
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
@@ -793,10 +762,6 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
     scene.add(object);
   });
 });
-
-
-
-
 
 //////////////////////////////////////////////////////13
 var mtlLoader = new MTLLoader();
@@ -830,14 +795,6 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
   });
 });
 
-
-
-
-
-
-
-
-
 //////////////////////////////////////////////////////desk
 
 var mtlLoader = new MTLLoader();
@@ -856,8 +813,7 @@ mtlLoader.load("../.OBJ/Desk.mtl", function (materials) {
     object.position.set(-30, -1.1, -12);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
-    object.rotateZ(Math.PI/2);
-    
+    object.rotateZ(Math.PI / 2);
 
     // Add lights (optional)
     var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
@@ -1001,7 +957,6 @@ function showMenu() {
 playButton.addEventListener("click", startExperience);
 controllers.addEventListener("unlock", showMenu);
 
-
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
@@ -1012,15 +967,15 @@ function onMouseMove(event) {
 
   // Mettre à jour le raycaster avec la position de la caméra et de la souris
   raycaster.setFromCamera(mouse, camera);
-  
+
   // Calculer les objets intersectés
   const intersects = raycaster.intersectObjects(scene.children, true);
 
   if (intersects.length > 0) {
-      const firstObject = intersects[0].object;
-      showInfoBanner(firstObject);
+    const firstObject = intersects[0].object;
+    showInfoBanner(firstObject);
   } else {
-      hideInfoBanner();
+    hideInfoBanner();
   }
 }
 
@@ -1041,7 +996,6 @@ function onMouseMove(event) {
 
 ///////////////////:
 
-
 //create the floor and added to the scene
 function onkeydown(event) {
   let keycode = event.which || event.keyCode;
@@ -1056,7 +1010,121 @@ function onkeydown(event) {
   }
 }
 
+const paintingData = [
+  // Front Wall
+  ...Array.from({ length: 4 }, (_, i) => ({
+    // Array.from creates an array from an array-like object. The first parameter is the array-like object. The second parameter is a map function that is called for each element in the array-like object. The map function takes two parameters: the element and the index. The map function returns the value that will be added to the new array. In this case, we are returning an object with the painting data. `_` is a placeholder for the element. We don't need it because we are not using the element. `i` is the index. We use it to set the painting number.
+    imgSrc: `artworks/${i + 1}.jpg`, // `i + 1` is the painting number. We add 1 to the index because the index starts at 0 but we want the painting numbers to start at 1.
+    width: 5, // width of the painting
+    height: 3, // height of the painting
+    position: { x: -15 + 10 * i, y: 2, z: -19.5 }, // position of the painting
+    rotationY: 0, // rotation of the painting
+    info: {
+      // info about the painting
+      title: `Van Gogh ${i + 1}`,
+      artist: "Vincent van Gogh",
+      description: `This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty. Artwork ${
+        i + 1
+      } perfectly encapsulates his love for the beauty of everyday life.`,
+      year: `Year ${i + 1}`,
+      link: "https://github.com/theringsofsaturn",
+    },
+  })),
+  // Back Wall
+  ...Array.from({ length: 4 }, (_, i) => ({
+    imgSrc: `artworks/${i + 5}.jpg`,
+    width: 5,
+    height: 3,
+    position: { x: -15 + 10 * i, y: 2, z: 19.5 },
+    rotationY: Math.PI,
+    info: {
+      title: `Van Gogh ${i + 5}`,
+      artist: "Vincent van Gogh",
+      description: `Artwork ${
+        i + 5
+      } by Vincent van Gogh is an exceptional piece showcasing his remarkable ability to capture emotion and atmosphere.`,
+      year: `Year ${i + 5}`,
+      link: "https://github.com/theringsofsaturn",
+    },
+  })),
+  // Left Wall
+  ...Array.from({ length: 4 }, (_, i) => ({
+    imgSrc: `artworks/${i + 9}.jpg`,
+    width: 5,
+    height: 3,
+    position: { x: -19.5, y: 2, z: -15 + 10 * i },
+    rotationY: Math.PI / 2,
+    info: {
+      title: `Van Gogh ${i + 9}`,
+      artist: "Vincent van Gogh",
+      description: `With its striking use of color and brushwork, Artwork ${
+        i + 9
+      } is a testament to Van Gogh's artistic genius.`,
+      year: `Year ${i + 9}`,
+      link: "https://github.com/theringsofsaturn",
+    },
+  })),
+  // Right Wall
+  ...Array.from({ length: 4 }, (_, i) => ({
+    imgSrc: `artworks/${i + 13}.jpg`,
+    width: 5,
+    height: 3,
+    position: { x: 19.5, y: 2, z: -15 + 10 * i },
+    rotationY: -Math.PI / 2,
+    info: {
+      title: `Van Gogh ${i + 13}`,
+      artist: "Vincent van Gogh",
+      description: `Artwork ${
+        i + 13
+      } is a captivating piece by Vincent van Gogh, reflecting his distinctive style and deep passion for art.`,
+      year: `Year ${i + 13}`,
+      link: "https://github.com/theringsofsaturn",
+    },
+  })),
+];
+
+let paintings = [];
+import { displayPaintingInfo, hidePaintingInfo } from "./displayPaintingInfo";
+
+paintingData.forEach((data) => {
+  const painting = new THREE.Mesh(
+    new THREE.PlaneGeometry(data.width, data.height),
+    new THREE.MeshLambertMaterial({ map: textureLoader.load(data.imgSrc) })
+  );
+
+  painting.position.set(data.position.x, data.position.y, data.position.z);
+  painting.rotation.y = data.rotationY;
+
+  painting.userData = {
+    type: "painting",
+    info: data.info,
+    url: data.info.link,
+  };
+
+  painting.castShadow = true;
+  painting.receiveShadow = true;
+
+  paintings.push(painting);
+});
+
 let render = function () {
+  const distanceThreshold = 8;
+
+  let paintingToShow;
+  paintings.forEach((painting) => {
+    const distanceToPainting = camera.position.distanceTo(painting.position);
+    if (distanceToPainting < distanceThreshold) {
+      paintingToShow = painting;
+    }
+  });
+
+  if (paintingToShow) {
+    // if there is a painting to show
+    displayPaintingInfo(paintingToShow.userData.info);
+  } else {
+    hidePaintingInfo();
+  }
+
   // cube.rotation.x += 0.01;
   // cube.rotation.y += 0.01;
   renderer.render(scene, camera);

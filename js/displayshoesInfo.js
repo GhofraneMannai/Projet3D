@@ -1,6 +1,6 @@
 // Display painting info in the DOM
-export const displayPaintingInfo = (info) => {
-  const infoElement = document.getElementById("painting-info"); // Get the reference
+export const displayshoesInfo = (info) => {
+  const infoElement = document.getElementById("shoes-info"); // Get the reference
 
   // Set the html content inside info element
   infoElement.innerHTML = `
@@ -13,7 +13,7 @@ export const displayPaintingInfo = (info) => {
 };
 
 // Hide painting info in the DOM
-export const hidePaintingInfo = () => {
-  const infoElement = document.getElementById("painting-info"); // Get the reference
-  infoElement.classList.remove("show"); // Remove the 'show' class
+export const hideshoesInfo = () => {
+  const infoElement = document.getElementById("shoes-info"); 
+  infoElement.classList.remove("show"); 
 };

@@ -20,76 +20,70 @@ camera.position.y += 3;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0xfffff, 1); //bachground color
-document.body.appendChild(renderer.domElement); //add the renderer to our html
+document.body.appendChild(renderer.domElement); 
 
-// Créer les lumières une seule fois et les réutiliser
-const ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Lumière ambiante douce blanche
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // Lumière directionnelle blanche
+
+const ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
 directionalLight.position.set(5, 10, 3);
 scene.add(ambientLight, directionalLight);
-const geometry = new THREE.BoxGeometry(1, 1, 1); //BoxGeometry is the shape of the object
-const material = new THREE.MeshBasicMaterial({ color: "grey" }); //color of the object
+const geometry = new THREE.BoxGeometry(1, 1, 1); 
+const material = new THREE.MeshBasicMaterial({ color: "grey" }); 
 const cube = new THREE.Mesh(geometry, material);
 
 //////////////////////////////////////////////1
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    //  size and position
     object.scale.set(2, 2, 2);
     object.position.set(10, -1.1, -18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    //  lights 
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+    
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
     scene.add(object);
   });
 });
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/11740_shoes_v1_L3.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/11740_shoes_v1_L3.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(0.14, 0.14, 0.14);
     object.position.set(-10, 0.9, -17);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
-
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
-
-    // Add the object to the scene
     scene.add(object);
   });
 });
@@ -97,28 +91,28 @@ mtlLoader.load("../.OBJ/11740_shoes_v1_L3.mtl", function (materials) {
 /////////////////////////////////////////////////2
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(2, 2, 2);
     object.position.set(0, -1.1, -18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+    
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
     // Add the object to the scene
@@ -127,31 +121,31 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
 });
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/11743_Soccer_Shoes_v1_l3.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/11743_Soccer_Shoes_v1_l3.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(0.3, 0.3, 0.3);
     object.position.set(3.3, 0.7, -20);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+    
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
@@ -159,61 +153,60 @@ mtlLoader.load("../.OBJ/11743_Soccer_Shoes_v1_l3.mtl", function (materials) {
 //////////////////////////////////////////////////////3
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(2, 2, 2);
     object.position.set(-10, -1.1, -18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+   
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+    
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
 
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/shoe.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/shoe.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(0.07, 0.07, 0.07);
     object.position.set(9.5, 0.8, -16);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+  
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+   
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
     scene.add(object);
   });
 });
@@ -221,63 +214,62 @@ mtlLoader.load("../.OBJ/shoe.mtl", function (materials) {
 //////////////////////////////////////////////////////4
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(2, 2, 2);
     object.position.set(20, -1.1, -18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+    
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
 
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/117_shoe_v1_L3.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/117_shoe_v1_L3.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(0.13, 0.13, 0.13);
     object.position.set(20, 0.7, -18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+  
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
@@ -285,63 +277,62 @@ mtlLoader.load("../.OBJ/117_shoe_v1_L3.mtl", function (materials) {
 //////////////////////////////////////////////////////5
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(2, 2, 2);
     object.position.set(-20, -1.1, -18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
 
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/11741_shoes_v1_l2.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/11741_shoes_v1_l2.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+   
     object.scale.set(0.3, 0.3, 0.3);
     object.position.set(-20, 1, -18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+   
     scene.add(object);
   });
 });
@@ -350,63 +341,63 @@ mtlLoader.load("../.OBJ/11741_shoes_v1_l2.mtl", function (materials) {
 //////////////////////////////////////////////////////6
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(2, 2, 2);
     object.position.set(28, -1, 15);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+   
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+    
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
 
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/13642_Polo_Boots_v1_L2.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/13642_Polo_Boots_v1_L2.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+
     object.scale.set(0.07, 0.07, 0.07);
     object.position.set(27, 1, 15.5);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI / 2);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+  
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
@@ -414,63 +405,63 @@ mtlLoader.load("../.OBJ/13642_Polo_Boots_v1_L2.mtl", function (materials) {
 //////////////////////////////////////////////////////7
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(2, 2, 2);
     object.position.set(28, -1, -10);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+  
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
 
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/12311_Boots_v2_l3.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/12311_Boots_v2_l3.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+   
     object.scale.set(0.07, 0.07, 0.07);
     object.position.set(28, 1, -10);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+ 
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
@@ -478,91 +469,91 @@ mtlLoader.load("../.OBJ/12311_Boots_v2_l3.mtl", function (materials) {
 //////////////////////////////////////////////////////8
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(2, 2, 2);
     object.position.set(28, -1, -1);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+    
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+ 
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/10148_RubberRainBoot_v02_L3.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/10148_RubberRainBoot_v02_L3.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+   
     object.scale.set(0.07, 0.07, 0.07);
     object.position.set(28, 1, -1);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI / 2);
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+  
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+   
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3);
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/10148_RubberRainBoot_v02_L3.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/10148_RubberRainBoot_v02_L3.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+  
     object.scale.set(0.07, 0.07, 0.07);
     object.position.set(28, 1, 0.6);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI / 2);
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+ 
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
@@ -570,62 +561,62 @@ mtlLoader.load("../.OBJ/10148_RubberRainBoot_v02_L3.mtl", function (materials) {
 //////////////////////////////////////////////////////9
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+   
     object.scale.set(2, 2, 2);
     object.position.set(28, -1, 6);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+ 
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+  
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+  
     scene.add(object);
   });
 });
 
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/12309_boots_v1_l2.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/12309_boots_v1_l2.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(0.17, 0.17, 0.17);
     object.position.set(28, 1, 6);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI / 2);
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+   
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+   
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+    
     scene.add(object);
   });
 });
@@ -635,31 +626,31 @@ mtlLoader.load("../.OBJ/12309_boots_v1_l2.mtl", function (materials) {
 //////////////////////////////////////////////////////10
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+
     object.scale.set(2, 2, 2);
     object.position.set(20, -1.1, 18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+ 
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+   
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+
     scene.add(object);
   });
 });
@@ -668,7 +659,7 @@ var mtlLoader = new MTLLoader();
 mtlLoader.load(
   "../.OBJ/Boots Elegance Shoes N301122.mtl",
   function (materials) {
-    console.log("Materials loaded:", materials); // Check for successful loading
+    console.log("Materials loaded:", materials); 
 
     materials.preload();
 
@@ -677,24 +668,24 @@ mtlLoader.load(
     objLoader.load(
       "../.OBJ/Boots Elegance Shoes N301122.obj",
       function (object) {
-        console.log("Object loaded:", object); // Check for successful loading
+        console.log("Object loaded:", object); 
 
-        // Adjust size and position
+    
         object.scale.set(1, 1, 1);
         object.position.set(30, 1.1, 18);
         object.rotateX(Math.PI / 2);
         object.rotateY(Math.PI);
         object.rotateZ(Math.PI / 2);
-        // Add lights (optional)
-        var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+       
+        var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
         scene.add(ambientLight);
 
-        // Add directional light (optional)
-        var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-        directionalLight.position.set(5, 10, 3); // Adjust light position
+        
+        var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+        directionalLight.position.set(5, 10, 3); 
         scene.add(directionalLight);
 
-        // Add the object to the scene
+      
         scene.add(object);
       }
     );
@@ -724,31 +715,31 @@ loader4.load(
 //////////////////////////////////////////////////////12
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+   
     object.scale.set(2, 2, 2);
     object.position.set(0, -1.1, 18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+   
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+   
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3);
     scene.add(directionalLight);
 
-    // Add the object to the scene
+   
     scene.add(object);
   });
 });
@@ -760,7 +751,7 @@ loader5.load(
     '../.OBJ/mtloader6/scene.gltf',
     function (gltf) {
       const model=gltf.scene;
-        // Adjust size and position
+       
         model.scale.set(9,8, 8);
         model.rotateY(Math.PI);
         model.position.set(9, 1, 17);
@@ -777,7 +768,7 @@ loader5.load(
 //////////////////////////////////////////////////////13
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
@@ -788,24 +779,23 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+    
     object.scale.set(2, 2, 2);
     object.position.set(10, -1.1, 18);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+        var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+   
     scene.add(object);
   });
 });
@@ -819,7 +809,7 @@ loader6.load(
     '../.OBJ/shoes_3__reference_only/scene.gltf',
     function (gltf) {
       const model=gltf.scene;
-        // Adjust size and position
+        
         model.scale.set(0.65,0.65, 0.65);
        model.rotateY(Math.PI);
        model.position.set(0.35, 1, 17);
@@ -935,43 +925,7 @@ loader9.load(
 
 
 
-//////////////////////////////////////////////////////desk
 
-// var mtlLoader = new MTLLoader();
-// mtlLoader.load("../.OBJ/Desk.mtl", function (materials) {
-//   console.log("Materials loaded:", materials); // Check for successful loading
-
-//   materials.preload();
-
-//   var objLoader = new OBJLoader();
-//   objLoader.setMaterials(materials);
-//   objLoader.load("../.OBJ/Desk.obj", function (object) {
-//     console.log("Object loaded:", object); // Check for successful loading
-
-//     // Adjust size and position
-//     object.scale.set(13, 13, 13);
-//     object.position.set(-30, -1.1, 7);
-//     object.rotateX(Math.PI / 2);
-//     object.rotateY(Math.PI);
-//     object.rotateZ(Math.PI / 2);
-
-//     // Add lights (optional)
-//     var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
-//     scene.add(ambientLight);
-
-//     // Add directional light (optional)
-//     var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-//     directionalLight.position.set(5, 10, 3); // Adjust light position
-//     scene.add(directionalLight);
-
-//     // Add the object to the scene
-//     scene.add(object);
-//   });
-// });
-
-
-
-//sofa
 const loader3 = new GLTFLoader();
 loader3.load(
     '../css/scene.gltf',
@@ -993,48 +947,47 @@ loader3.load(
 
 var mtlLoader = new MTLLoader();
 mtlLoader.load("../.OBJ/Humano_01Business_01_30K.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+  console.log("Materials loaded:", materials); 
 
   materials.preload();
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.load("../.OBJ/Humano_01Business_01_30K.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+    console.log("Object loaded:", object); 
 
-    // Adjust size and position
+   
     object.scale.set(-50, -50, -50);
     object.position.set(-30, 2, 7);
     object.rotateX(Math.PI / 2);
     object.rotateY(Math.PI);
     object.rotateZ(Math.PI / 2);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+
+    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); 
     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
+   
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); 
+    directionalLight.position.set(5, 10, 3); 
     scene.add(directionalLight);
 
-    // Add the object to the scene
+  
     scene.add(object);
   });
 });
 
-//controlers
+
 document.addEventListener("keydown", onkeydown, false);
 
-//Create a texture loader instance
+
 const textureLoader = new THREE.TextureLoader();
 
-// Load the floor texture asynchronously
+
 textureLoader.load(
-  "img/Floor.jpg", // Path to the texture image
+  "img/Floor.jpg", 
   function (texture) {
-    // Once the texture is loaded, you can use it
-    // For example, you can create a material with this texture
+
     const floorMaterial = new THREE.MeshBasicMaterial({
       map: texture,
       side: THREE.DoubleSide,
@@ -1043,17 +996,16 @@ textureLoader.load(
     floorMaterial.map.wrapT = THREE.RepeatWrapping;
     floorMaterial.map.repeat.set(20, 20);
 
-    // Then you can use this material to create a mesh
-    // Assuming you have geometry for the floor
-    const floorGeometry = new THREE.PlaneGeometry(100, 100); // Example size
+  
+    const floorGeometry = new THREE.PlaneGeometry(100, 100); 
     const floorMesh = new THREE.Mesh(floorGeometry, floorMaterial);
 
     floorMesh.rotation.x = Math.PI / 2;
     floorMesh.position.y = -Math.PI;
-    // Add the floor mesh to the scene
+  
     scene.add(floorMesh);
   },
-  undefined, // onProgress callback (optional)
+  undefined, 
   function (error) {
     console.error("An error occurred while loading the texture:", error);
   }
@@ -1104,13 +1056,9 @@ scene.add(ceilingplane);
 ceilingplane.rotation.x = Math.PI / 2;
 ceilingplane.position.y = 10;
 
-// for(let i = 0 ; i<wallgroup.children.length ;  i++)
-// {
-//     wallgroup.children[i].BBox=new THREE.Box3();
-//     wallgroup.childreen[i].BBox.setFromObject(wallgroup.children[i]);
-// }
 
-function createpainting(imageURL, width, heigh, position) {
+function create
+(imageURL, width, heigh, position) {
   const textureLoader = new THREE.TextureLoader();
   const paintingTexture = textureLoader.load(imageURL);
   const material = new THREE.MeshBasicMaterial({ map: paintingTexture });
@@ -1119,33 +1067,33 @@ function createpainting(imageURL, width, heigh, position) {
   painting.position.set(position.x, position.y, position.z);
   return painting;
 }
-const painting1 = createpainting(
+const image1 = create(
   "/artwork/man.jpg",
   15,
   5,
   new THREE.Vector3(-6, 5, -19.99)
 );
 
-scene.add(painting1, painting1);
+scene.add(image1, image1);
 
-const painting2 = createpainting(
+const image2 = create(
   "/artwork/woman.jpg",
   15,
   5,
   new THREE.Vector3(-2, 5, 19)
 );
-painting2.rotation.y = Math.PI;
+image2.rotation.y = Math.PI;
 
-scene.add(painting2, painting2);
-const painting3 = createpainting(
+scene.add(image2, image2);
+const image3 = create(
   "/artwork/child.jpg",
   15,
   5,
   new THREE.Vector3(29, 7, 2)
 );
-painting3.rotation.y = -Math.PI / 2;
+image3.rotation.y = -Math.PI / 2;
 
-scene.add(painting3, painting3);
+scene.add(image3, image3);
 
 //souris
 const controllers = new PointerLockControls(camera, document.body);
@@ -1169,43 +1117,8 @@ controllers.addEventListener("unlock", showMenu);
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
-function onMouseMove(event) {
-  // Calculer la position de la souris en coordonnées normalisées (-1 à +1)
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
-  // Mettre à jour le raycaster avec la position de la caméra et de la souris
-  raycaster.setFromCamera(mouse, camera);
 
-  // Calculer les objets intersectés
-  const intersects = raycaster.intersectObjects(scene.children, true);
-
-  if (intersects.length > 0) {
-    const firstObject = intersects[0].object;
-    showInfoBanner(firstObject);
-  } else {
-    hideInfoBanner();
-  }
-}
-
-// window.addEventListener('mousemove', onMouseMove);
-
-// function showInfoBanner(object) {
-//   const infoBanner = document.getElementById('infoBanner');
-//   const infoText = document.getElementById('infoText');
-//   // Mettre à jour le texte en fonction de l'objet, vous pouvez customiser cela
-//   infoText.innerHTML = `Object: ${object.name} <br> Description: Details about the object here`;
-//   infoBanner.style.display = 'block';
-// }
-
-// function hideInfoBanner() {
-//   const infoBanner = document.getElementById('infoBanner');
-//   infoBanner.style.display = 'none';
-// }
-
-///////////////////:
-
-//create the floor and added to the scene
 function onkeydown(event) {
   let keycode = event.which || event.keyCode;
   if (keycode == 39 || keycode == 68) {
@@ -1219,7 +1132,7 @@ function onkeydown(event) {
   }
 }
 
-const paintingData = [
+const shoesData = [
   // Front Wall
   {
     imgSrc: "shoes/1.jpg",
@@ -1377,8 +1290,8 @@ const paintingData = [
     imgSrc: "shoes/11.jpg",
     width: 5,
     height: 3,
-    position: { x: 19.5, y: 2, z: 5 }, // Modifier la position x pour déplacer l'objet à droite
-    rotationY: -Math.PI / 2, // Ajuster la rotation pour orienter correctement l'objet
+    position: { x: 19.5, y: 2, z: 5 }, 
+    rotationY: -Math.PI / 2, 
     info: {
       title: "Air Force 1",
       brand: "Nike",
@@ -1422,52 +1335,51 @@ const paintingData = [
   
   ];
   
-  console.log(paintingData);
+  console.log(shoesData);
   
-let paintings = [];
-import { displayPaintingInfo, hidePaintingInfo } from "./displayPaintingInfo";
+let shoess = [];
+import { displayshoesInfo, hideshoesInfo } from "./displayshoesInfo";
 
-paintingData.forEach((data) => {
-  const painting = new THREE.Mesh(
+shoesData.forEach((data) => {
+  const shoes = new THREE.Mesh(
     new THREE.PlaneGeometry(data.width, data.height),
     new THREE.MeshLambertMaterial({ map: textureLoader.load(data.imgSrc) })
   );
 
-  painting.position.set(data.position.x, data.position.y, data.position.z);
-  painting.rotation.y = data.rotationY;
+  shoes.position.set(data.position.x, data.position.y, data.position.z);
+  shoes.rotation.y = data.rotationY;
 
-  painting.userData = {
-    type: "painting",
+  shoes.userData = {
+    type: "shoes",
     info: data.info,
     url: data.info.link,
   };
 
-  painting.castShadow = true;
-  painting.receiveShadow = true;
+  shoes.castShadow = true;
+  shoes.receiveShadow = true;
 
-  paintings.push(painting);
+  shoess.push(shoes);
 });
 
 let render = function () {
   const distanceThreshold = 8;
 
-  let paintingToShow;
-  paintings.forEach((painting) => {
-    const distanceToPainting = camera.position.distanceTo(painting.position);
-    if (distanceToPainting < distanceThreshold) {
-      paintingToShow = painting;
+  let shoesToShow;
+  shoess.forEach((shoes) => {
+    const distanceToshoes = camera.position.distanceTo(shoes.position);
+    if (distanceToshoes < distanceThreshold) {
+      shoesToShow = shoes;
     }
   });
 
-  if (paintingToShow) {
-    // if there is a painting to show
-    displayPaintingInfo(paintingToShow.userData.info);
+  if (shoesToShow) {
+  
+    displayshoesInfo(shoesToShow.userData.info);
   } else {
-    hidePaintingInfo();
+    hideshoesInfo();
   }
 
-  // cube.rotation.x += 0.01;
-  // cube.rotation.y += 0.01;
+ 
   renderer.render(scene, camera);
   requestAnimationFrame(render);
 };

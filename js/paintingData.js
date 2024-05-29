@@ -1,4 +1,4 @@
-export const paintingData = [
+export const shoesData = [
  // Front Wall
  {
   imgSrc: "shoes/1.jpg",
@@ -201,4 +201,4 @@ export const paintingData = [
 
 ];
 
-console.log(paintingData);
+console.log(shoesData);

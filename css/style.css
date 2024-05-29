@@ -213,7 +213,7 @@ canvas {
   }
 }
 
-#painting-info {
+#shoes-info {
   position: fixed;
   top: 20px;
   left: 20px;
@@ -230,19 +230,19 @@ canvas {
   opacity: 0;
 }
 
-#painting-info.show {
+#shoes-info.show {
   transform: translateY(0);
   opacity: 1;
 }
 
-#painting-info h3 {
+#shoes-info h3 {
   margin: 0 0 10px 0;
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-#painting-info p {
+#shoes-info p {
   margin: 0;
   font-size: 1.2em;
 }

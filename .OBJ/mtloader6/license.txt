@@ -1,0 +1,11 @@
+Model Information:
+* title:	Arnt Shoes - Ulv Jord
+* source:	https://sketchfab.com/3d-models/arnt-shoes-ulv-jord-83cb2a9e9afb47cd9f45461613796645
+* author:	Arnt Shoes (https://sketchfab.com/Arntorius)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Arnt Shoes - Ulv Jord" (https://sketchfab.com/3d-models/arnt-shoes-ulv-jord-83cb2a9e9afb47cd9f45461613796645) by Arnt Shoes (https://sketchfab.com/Arntorius) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

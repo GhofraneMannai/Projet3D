@@ -786,10 +786,13 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
 //femme
 const loader5 = new GLTFLoader();
 loader5.load(
-    '../mtloader6/scene.gltf',
+    '../.OBJ/mtloader6/scene.gltf',
     function (gltf) {
       const model=gltf.scene;
-      model.position.set(-29, -3, -8);
+        // Adjust size and position
+        model.scale.set(9,8, 8);
+        model.rotateY(Math.PI);
+        model.position.set(9, 1, 17);
 
       scene.add(model);
     },
@@ -806,6 +809,10 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
   console.log("Materials loaded:", materials); // Check for successful loading
 
   materials.preload();
+
+
+
+
 
   var objLoader = new OBJLoader();
   objLoader.setMaterials(materials);
@@ -835,6 +842,45 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
 
 
 
+// //femme
+const loader6 = new GLTFLoader();
+loader6.load(
+    '../.OBJ/shoes_3__reference_only/scene.gltf',
+    function (gltf) {
+      const model=gltf.scene;
+        // Adjust size and position
+        model.scale.set(0.75,0.75, 0.75);
+       model.rotateY(Math.PI);
+       model.position.set(0.35, 1, 18);
+
+      scene.add(model);
+    },
+    undefined,
+    function (error) {
+        console.error(error);
+    }
+);
+
+
+
+// //femme
+const loader7 = new GLTFLoader();
+loader7.load(
+    '../.OBJ/shoess/scene.gltf',
+    function (gltf) {
+      const model=gltf.scene;
+        // Adjust size and position
+        model.scale.set(5,5, 5);
+       model.rotateY(Math.PI);
+       model.position.set(5, 1, 17);
+
+      scene.add(model);
+    },
+    undefined,
+    function (error) {
+        console.error(error);
+    }
+);
 
 
 
@@ -1082,18 +1128,23 @@ function createpainting(imageURL, width, heigh, position) {
   return painting;
 }
 const painting1 = createpainting(
-  "/artwork/manshoes.png",
+  "/artwork/man.jpg",
   15,
   5,
-  new THREE.Vector3(10, 5, -19.99)
+  new THREE.Vector3(-6, 5, -19.99)
 );
+
+scene.add(painting1, painting1);
+
 const painting2 = createpainting(
-  "/artwork/1.jpg",
-  10,
+  "/artwork/woman.jpg",
+  15,
   5,
-  new THREE.Vector3(-10, 5, -19.99)
+  new THREE.Vector3(-2, 5, 19)
 );
-scene.add(painting1, painting2);
+painting2.rotation.y = Math.PI;
+
+scene.add(painting2, painting2);
 
 //souris
 const controllers = new PointerLockControls(camera, document.body);

@@ -1,0 +1,411 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1749,
+      "max": [
+        0.17251616716384888,
+        0.11477965861558914,
+        0.18866845965385437
+      ],
+      "min": [
+        0.06917405873537064,
+        0.0007183899288065732,
+        -0.09125849604606628
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 20988,
+      "componentType": 5126,
+      "count": 1749,
+      "max": [
+        0.9992409944534302,
+        0.9963485598564148,
+        0.9981557726860046
+      ],
+      "min": [
+        -0.9999879598617554,
+        -0.9999904632568359,
+        -0.9972885847091675
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1749,
+      "max": [
+        0.9956984519958496,
+        0.9972084760665894,
+        0.9998772144317627,
+        1.0
+      ],
+      "min": [
+        -0.996360182762146,
+        -0.9983310699462891,
+        -0.9985498785972595,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1749,
+      "max": [
+        0.9884859919548035,
+        0.9808949828147888
+      ],
+      "min": [
+        0.011436999775469303,
+        0.007615000009536743
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 7665,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 41976,
+      "componentType": 5126,
+      "count": 1755,
+      "max": [
+        -0.07941627502441406,
+        0.11197871714830399,
+        0.19710016250610352
+      ],
+      "min": [
+        -0.18279750645160675,
+        -0.0010725699830800295,
+        -0.08293265849351883
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 63036,
+      "componentType": 5126,
+      "count": 1755,
+      "max": [
+        0.9999879598617554,
+        0.9963485598564148,
+        0.9981555342674255
+      ],
+      "min": [
+        -0.999293327331543,
+        -0.9999904632568359,
+        -0.9972884654998779
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 27984,
+      "componentType": 5126,
+      "count": 1755,
+      "max": [
+        0.9936937689781189,
+        0.9976885914802551,
+        0.9985500574111938,
+        1.0
+      ],
+      "min": [
+        -0.9963603615760803,
+        -0.9960235357284546,
+        -0.9968926906585693,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 13992,
+      "componentType": 5126,
+      "count": 1755,
+      "max": [
+        0.9848359823226929,
+        0.9814079999923706
+      ],
+      "min": [
+        0.02179500088095665,
+        0.006955999881029129
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 30660,
+      "componentType": 5125,
+      "count": 7665,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Arnt Shoes (https://sketchfab.com/Arntorius)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/arnt-shoes-ulv-jord-83cb2a9e9afb47cd9f45461613796645",
+      "title": "Arnt Shoes - Ulv Jord"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 61320,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 28032,
+      "byteOffset": 61320,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 84096,
+      "byteOffset": 89352,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 56064,
+      "byteOffset": 173448,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 229512,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/ShoesDCKalisVulc_baseColor.png"
+    },
+    {
+      "uri": "textures/ShoesDCKalisVulc_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/ShoesDCKalisVulc_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "ShoesDCKalisVulc",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Scan01_1_L_ShoesDCKalisVulc_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "scan01_1_R_ShoesDCKalisVulc_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "1718c57891c84dc298e244eb03213456.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        6
+      ],
+      "name": "MShoesDCKalisVulc"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        0.9990443324289322,
+        0.0,
+        0.043708372671940145,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.043708372671940145,
+        0.0,
+        0.9990443324289322,
+        0.0,
+        0.0005691801779903471,
+        0.005417154170572758,
+        -0.04552716016769409,
+        1.0
+      ],
+      "name": "Scan01_1_L"
+    },
+    {
+      "mesh": 0,
+      "name": "Scan01_1_L_ShoesDCKalisVulc_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0032361475750803947,
+        0.005417154170572758,
+        -0.04164791852235794,
+        1.0
+      ],
+      "name": "scan01_1_R"
+    },
+    {
+      "mesh": 1,
+      "name": "scan01_1_R_ShoesDCKalisVulc_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

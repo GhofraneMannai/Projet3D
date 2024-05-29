@@ -702,36 +702,7 @@ mtlLoader.load(
 );
 
 //////////////////////////////////////////////////////11
-var mtlLoader = new MTLLoader();
-mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
 
-  materials.preload();
-
-  var objLoader = new OBJLoader();
-  objLoader.setMaterials(materials);
-  objLoader.load("../.OBJ/crate1.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
-
-    // Adjust size and position
-    object.scale.set(2, 2, 2);
-    object.position.set(-10, -1.1, 18);
-    object.rotateX(Math.PI / 2);
-    object.rotateY(Math.PI);
-
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
-    scene.add(ambientLight);
-
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
-    scene.add(directionalLight);
-
-    // Add the object to the scene
-    scene.add(object);
-  });
-});
 
 const loader4 = new GLTFLoader();
 loader4.load(
@@ -932,7 +903,7 @@ loader2.load(
     '../artwork/scene.gltf',
     function (gltf) {
       const model=gltf.scene;
-      model.position.set(-29, -3, -8);
+      model.position.set(-28, -3, 10);
       model.scale.set(5,5,5);
       model.rotateY(Math.PI / 2);
         scene.add(model);
@@ -951,7 +922,7 @@ loader9.load(
     '../.OBJ/mens/scene.gltf',
     function (gltf) {
       const model=gltf.scene;
-      model.position.set(-29, -3, 8);
+      model.position.set(-32, -2, -8);
       model.scale.set(0.05,0.05,0.05);
       model.rotateY(Math.PI / 2);
         scene.add(model);
@@ -1007,7 +978,7 @@ loader3.load(
     function (gltf) {
       const object=gltf.scene;
       object.scale.set(7,7,7);
-      object.position.set(-27, 4, 8);
+      object.position.set(-28, 5, -8);
       object.rotateY(Math.PI / 2);
     
         scene.add(object);
@@ -1170,7 +1141,7 @@ const painting3 = createpainting(
   "/artwork/child.jpg",
   15,
   5,
-  new THREE.Vector3(15, 5, 2)
+  new THREE.Vector3(29, 7, 2)
 );
 painting3.rotation.y = -Math.PI / 2;
 
@@ -1406,8 +1377,8 @@ const paintingData = [
     imgSrc: "shoes/11.jpg",
     width: 5,
     height: 3,
-    position: { x: -19.5, y: 2, z: 5 },
-    rotationY: Math.PI / 2,
+    position: { x: 19.5, y: 2, z: 5 }, // Modifier la position x pour déplacer l'objet à droite
+    rotationY: -Math.PI / 2, // Ajuster la rotation pour orienter correctement l'objet
     info: {
       title: "Air Force 1",
       brand: "Nike",
@@ -1421,8 +1392,8 @@ const paintingData = [
     imgSrc: "shoes/12.jpg",
     width: 5,
     height: 3,
-    position: { x: -19.5, y: 2, z: 15 },
-    rotationY: Math.PI / 2,
+    position: { x: 19.5, y: 2, z: 15 },
+    rotationY: -Math.PI / 2,
     info: {
       title: "Superstar",
       brand: "Adidas",

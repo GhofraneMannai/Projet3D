@@ -2,6 +2,8 @@ import * as THREE from "three";
 import { MTLLoader } from "three/addons/loaders/MTLLoader.js";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls";
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -797,175 +799,122 @@ mtlLoader.load("../.OBJ/crate1.mtl", function (materials) {
 
 
 
-//////////////////////////////////////////////////////table1
-var mtlLoader = new MTLLoader();
-mtlLoader.load("../img/Wood_Table.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
-
-  materials.preload();
-
-  var objLoader = new OBJLoader();
-  objLoader.setMaterials(materials);
-  objLoader.load("../img/Wood_Table.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
-
-    // Adjust size and position
-    object.scale.set(10,10, 12);
-    object.position.set(16, -4, 1);
-    object.rotateX(Math.PI );
-    object.rotateY(Math.PI);
-    object.rotateZ(Math.PI);
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
-    scene.add(ambientLight);
-
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
-    scene.add(directionalLight);
-
-    // Add the object to the scene
-    scene.add(object);
-  });
-});
-
-
-
-//////////////////////////////////////////////////////backet1
-var mtlLoader = new MTLLoader();
-mtlLoader.load("../.OBJ/shoes-box-003.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
-
-  materials.preload();
-
-  var objLoader = new OBJLoader();
-  objLoader.setMaterials(materials);
-  objLoader.load("../.OBJ/shoes-box-003.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
-
-    // Adjust size and position
-    object.scale.set(10,10, 12);
-    object.position.set(16, 6, 1);
-    object.rotateX(Math.PI );
-    object.rotateY(Math.PI /2);
-  
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
-    scene.add(ambientLight);
-
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
-    scene.add(directionalLight);
-
-    // Add the object to the scene
-    scene.add(object);
-  });
-});
-
-
-
-//////////////////////////////////////////////////////table2
-var mtlLoader = new MTLLoader();
-mtlLoader.load("../img/Wood_Table.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
-
-  materials.preload();
-
-  var objLoader = new OBJLoader();
-  objLoader.setMaterials(materials);
-  objLoader.load("../img/Wood_Table.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
-
-    // Adjust size and position
-    object.scale.set(10,10, 12);
-    object.position.set(10, -4, 1);
-    object.rotateX(Math.PI );
-    object.rotateY(Math.PI);
-    object.rotateZ(Math.PI);
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
-    scene.add(ambientLight);
-
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
-    scene.add(directionalLight);
-
-    // Add the object to the scene
-    scene.add(object);
-  });
-});
 
 
 
 
-//////////////////////////////////////////////////////table4
-var mtlLoader = new MTLLoader();
-mtlLoader.load("../img/Wood_Table.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
 
-  materials.preload();
 
-  var objLoader = new OBJLoader();
-  objLoader.setMaterials(materials);
-  objLoader.load("../img/Wood_Table.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
 
-    // Adjust size and position
-    object.scale.set(10,10, 12);
-    object.position.set(5, -4, 1);
-    object.rotateX(Math.PI );
-    object.rotateY(Math.PI);
-    object.rotateZ(Math.PI);
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
-    scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
-    scene.add(directionalLight);
 
-    // Add the object to the scene
-    scene.add(object);
-  });
-});
 
+//////////client
+
+const loader = new GLTFLoader();
+loader.load(
+    '../.OBJ/scene.gltf',
+    function (gltf) {
+      const model=gltf.scene;
+      model.scale.set(4,4,4);
+      model.position.set(15, -3, 14);
+      model.rotateY(Math.PI / 2);  
+        scene.add(model);
+    },
+    undefined,
+    function (error) {
+        console.error(error);
+    }
+);
+
+
+const loader1 = new GLTFLoader();
+loader1.load(
+    '../js/scene.gltf',
+    function (gltf) {
+      const model=gltf.scene;
+   
+      model.scale.set(2,2,2);
+      model.rotateY(Math.PI / 2);
+        scene.add(model);
+    },
+    undefined,
+    function (error) {
+        console.error(error);
+    }
+);
+
+
+//sofa
+const loader2 = new GLTFLoader();
+loader2.load(
+    '../artwork/scene.gltf',
+    function (gltf) {
+      const model=gltf.scene;
+      model.position.set(-29, -3, -8);
+      model.scale.set(5,5,5);
+      model.rotateY(Math.PI / 2);
+        scene.add(model);
+    },
+    undefined,
+    function (error) {
+        console.error(error);
+    }
+);
 
 //////////////////////////////////////////////////////desk
 
-var mtlLoader = new MTLLoader();
-mtlLoader.load("../.OBJ/Desk.mtl", function (materials) {
-  console.log("Materials loaded:", materials); // Check for successful loading
+// var mtlLoader = new MTLLoader();
+// mtlLoader.load("../.OBJ/Desk.mtl", function (materials) {
+//   console.log("Materials loaded:", materials); // Check for successful loading
 
-  materials.preload();
+//   materials.preload();
 
-  var objLoader = new OBJLoader();
-  objLoader.setMaterials(materials);
-  objLoader.load("../.OBJ/Desk.obj", function (object) {
-    console.log("Object loaded:", object); // Check for successful loading
+//   var objLoader = new OBJLoader();
+//   objLoader.setMaterials(materials);
+//   objLoader.load("../.OBJ/Desk.obj", function (object) {
+//     console.log("Object loaded:", object); // Check for successful loading
 
-    // Adjust size and position
-    object.scale.set(10, 10, 10);
-    object.position.set(-30, -1.1, 7);
-    object.rotateX(Math.PI / 2);
-    object.rotateY(Math.PI);
-    object.rotateZ(Math.PI / 2);
+//     // Adjust size and position
+//     object.scale.set(13, 13, 13);
+//     object.position.set(-30, -1.1, 7);
+//     object.rotateX(Math.PI / 2);
+//     object.rotateY(Math.PI);
+//     object.rotateZ(Math.PI / 2);
 
-    // Add lights (optional)
-    var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
-    scene.add(ambientLight);
+//     // Add lights (optional)
+//     var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4); // Soft white ambient light
+//     scene.add(ambientLight);
 
-    // Add directional light (optional)
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
-    directionalLight.position.set(5, 10, 3); // Adjust light position
-    scene.add(directionalLight);
+//     // Add directional light (optional)
+//     var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8); // White directional light
+//     directionalLight.position.set(5, 10, 3); // Adjust light position
+//     scene.add(directionalLight);
 
-    // Add the object to the scene
-    scene.add(object);
-  });
-});
+//     // Add the object to the scene
+//     scene.add(object);
+//   });
+// });
+
+
+
+//sofa
+const loader3 = new GLTFLoader();
+loader3.load(
+    '../css/scene.gltf',
+    function (gltf) {
+      const object=gltf.scene;
+      object.scale.set(5,5,5);
+      object.position.set(-15, 4, 6);
+      object.rotateY(Math.PI / 2);
+    
+        scene.add(object);
+    },
+    undefined,
+    function (error) {
+        console.error(error);
+    }
+);
 
 //////////////////////////////////////////////////////desk
 

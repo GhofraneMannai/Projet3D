@@ -849,9 +849,9 @@ loader6.load(
     function (gltf) {
       const model=gltf.scene;
         // Adjust size and position
-        model.scale.set(0.75,0.75, 0.75);
+        model.scale.set(0.65,0.65, 0.65);
        model.rotateY(Math.PI);
-       model.position.set(0.35, 1, 18);
+       model.position.set(0.35, 1, 17);
 
       scene.add(model);
     },
@@ -870,7 +870,7 @@ loader7.load(
     function (gltf) {
       const model=gltf.scene;
         // Adjust size and position
-        model.scale.set(5,5, 5);
+        model.scale.set(30,35, 35);
        model.rotateY(Math.PI);
        model.position.set(5, 1, 17);
 
@@ -942,6 +942,27 @@ loader2.load(
         console.error(error);
     }
 );
+
+
+
+//men
+const loader9 = new GLTFLoader();
+loader9.load(
+    '../.OBJ/mens/scene.gltf',
+    function (gltf) {
+      const model=gltf.scene;
+      model.position.set(-29, -3, 8);
+      model.scale.set(0.05,0.05,0.05);
+      model.rotateY(Math.PI / 2);
+        scene.add(model);
+    },
+    undefined,
+    function (error) {
+        console.error(error);
+    }
+);
+
+
 
 //////////////////////////////////////////////////////desk
 
@@ -1145,6 +1166,15 @@ const painting2 = createpainting(
 painting2.rotation.y = Math.PI;
 
 scene.add(painting2, painting2);
+const painting3 = createpainting(
+  "/artwork/child.jpg",
+  15,
+  5,
+  new THREE.Vector3(15, 5, 2)
+);
+painting3.rotation.y = -Math.PI / 2;
+
+scene.add(painting3, painting3);
 
 //souris
 const controllers = new PointerLockControls(camera, document.body);

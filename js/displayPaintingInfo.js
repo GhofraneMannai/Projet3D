@@ -5,9 +5,9 @@ export const displayPaintingInfo = (info) => {
   // Set the html content inside info element
   infoElement.innerHTML = `
       <h3>${info.title}</h3>
-      <p>Artist: ${info.artist}</p>
+      <p>Brand: ${info.brand}</p>
       <p>Description: ${info.description}</p>
-      <p>Year: ${info.year}</p>
+      <p>Price: ${info.price}</p>
     `;
   infoElement.classList.add("show"); // Add the 'show' class
 };

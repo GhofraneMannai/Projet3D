@@ -1,0 +1,443 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 34567,
+      "max": [
+        0.03141093999147415,
+        0.07760210335254669,
+        0.17661689221858978
+      ],
+      "min": [
+        -0.04024582356214523,
+        -0.106631338596344,
+        -0.0009537620353512466
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 414804,
+      "componentType": 5126,
+      "count": 34567,
+      "max": [
+        1.0,
+        0.9999811053276062,
+        0.9999998211860657
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 34567,
+      "max": [
+        0.9999999403953552,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999998807907104,
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 34567,
+      "max": [
+        0.9982852339744568,
+        0.980665385723114
+      ],
+      "min": [
+        0.0018282112432643771,
+        0.001758409896865487
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 276536,
+      "componentType": 5126,
+      "count": 34567,
+      "max": [
+        0.9982852339744568,
+        0.980665385723114
+      ],
+      "min": [
+        0.0018282112432643771,
+        0.001758409896865487
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 553072,
+      "componentType": 5126,
+      "count": 34567,
+      "max": [
+        0.9982852339744568,
+        0.980665385723114
+      ],
+      "min": [
+        0.0018282112432643771,
+        0.001758409896865487
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 829608,
+      "componentType": 5126,
+      "count": 34567,
+      "max": [
+        0.6168479919433594,
+        0.1333618015050888
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 191679,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 829608,
+      "componentType": 5126,
+      "count": 3451,
+      "max": [
+        0.028987199068069458,
+        0.06508416682481766,
+        0.17462868988513947
+      ],
+      "min": [
+        -0.003188919508829713,
+        0.005029818508774042,
+        5.2906572818756104e-05
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 871020,
+      "componentType": 5126,
+      "count": 3451,
+      "max": [
+        1.0,
+        0.9999999403953552,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1106144,
+      "componentType": 5126,
+      "count": 3451,
+      "max": [
+        0.05973929911851883,
+        0.031233608722686768
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1133752,
+      "componentType": 5126,
+      "count": 3451,
+      "max": [
+        0.03347575664520264,
+        0.043633341789245605
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 766716,
+      "componentType": 5125,
+      "count": 20406,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "hiirusama (https://sketchfab.com/hiirusama)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/curvy-golden-ankle-strap-sandal-heels-ebffc075a296454a89e3a8d9ff7d7853",
+      "title": "Curvy Golden Ankle Strap Sandal Heels"
+    },
+    "generator": "Sketchfab-15.98.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 848340,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1161360,
+      "byteOffset": 848340,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 912432,
+      "byteOffset": 2009700,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 553072,
+      "byteOffset": 2922132,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 3475204,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/texture_baseColor.png"
+    },
+    {
+      "uri": "textures/texture_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/texture_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "texture",
+      "normalTexture": {
+        "index": 2,
+        "scale": 0.15,
+        "texCoord": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.6804921692400053,
+        "metallicRoughnessTexture": {
+          "index": 1,
+          "texCoord": 1
+        },
+        "roughnessFactor": 0.4590043539841578
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "topPiece",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.577201,
+          0.509069,
+          0.129819,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8639394694070395
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Curvy_Heel_texture_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4,
+            "TEXCOORD_2": 5,
+            "TEXCOORD_3": 6
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Curvy_Heel_topPiece_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10,
+            "TEXCOORD_1": 11
+          },
+          "indices": 12,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "d3757d5fbc024c279a1461554e711e40.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Curvy_Heel"
+    },
+    {
+      "mesh": 0,
+      "name": "Curvy_Heel_texture_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Curvy_Heel_topPiece_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

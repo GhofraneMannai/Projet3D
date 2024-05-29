@@ -1,248 +1,204 @@
 export const paintingData = [
-  // Front Wall
-  {
-    imgSrc: "artworks/1.jpg",
-    width: 5,
-    height: 3,
-    position: { x: -15, y: 2, z: -19.5 },
-    rotationY: 0,
-    info: {
-      title: "Van Gogh 1",
-      artist: "Vincent van Gogh",
-      description:
-        "This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty. Artwork 1 perfectly encapsulates his love for the beauty of everyday life.",
-      year: "Year 1",
-      link: "https://github.com/theringsofsaturn/1",
-    },
+ // Front Wall
+ {
+  imgSrc: "shoes/1.jpg",
+  width: 5,
+  height: 3,
+  position: { x: -15, y: 2, z: -19.5 },
+  rotationY: 0,
+  info: {
+    title: "Air Max 270",
+    brand: "Nike",
+    description:
+      "The Nike Air Max 270 features the first-ever Max Air unit created specifically for Nike Sportswear, with an emphasis on all-day comfort, style, and versatility.",
+    price: "$150",
+    link: "https://www.nike.com/air-max-270",
   },
-  {
-    imgSrc: "artworks/2.jpg",
-    width: 5,
-    height: 3,
-    position: { x: -5, y: 2, z: -19.5 },
-    rotationY: 0,
-    info: {
-      title: "Van Gogh 2",
-      artist: "Vincent van Gogh",
-      description:
-        "This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty. Artwork 2 perfectly encapsulates his love for the beauty of everyday life.",
-      year: "Year 2",
-      link: "https://github.com/theringsofsaturn/2",
-    },
+},
+{
+  imgSrc: "shoes/2.jpg",
+  width: 5,
+  height: 3,
+  position: { x: -5, y: 2, z: -19.5 },
+  rotationY: 0,
+  info: {
+    title: "Ultraboost 21",
+    brand: "Adidas",
+    description:
+      "The Adidas Ultraboost 21 is designed to provide maximum comfort and energy return, featuring a Boost midsole and Primeknit upper.",
+    price: "$180",
+    link: "https://www.adidas.com/ultraboost-21",
   },
-  {
-    imgSrc: "artworks/3.jpg",
-    width: 5,
-    height: 3,
-    position: { x: 5, y: 2, z: -19.5 },
-    rotationY: 0,
-    info: {
-      title: "Van Gogh 3",
-      artist: "Vincent van Gogh",
-      description:
-        "This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty. Artwork 3 perfectly encapsulates his love for the beauty of everyday life.",
-      year: "Year 3",
-      link: "https://github.com/theringsofsaturn/3",
-    },
+},
+{
+  imgSrc: "shoes/3.jpg",
+  width: 5,
+  height: 3,
+  position: { x: 5, y: 2, z: -19.5 },
+  rotationY: 0,
+  info: {
+    title: "Classic Leather",
+    brand: "Reebok",
+    description:
+      "The Reebok Classic Leather is a timeless sneaker that offers both comfort and style, featuring a soft leather upper and die-cut EVA midsole.",
+    price: "$75",
+    link: "https://www.reebok.com/classic-leather",
   },
-  {
-    imgSrc: "artworks/4.jpg",
-    width: 5,
-    height: 3,
-    position: { x: 15, y: 2, z: -19.5 },
-    rotationY: 0,
-    info: {
-      title: "Van Gogh 4",
-      artist: "Vincent van Gogh",
-      description:
-        "This is one of the masterpieces by Vincent van Gogh, showcasing his unique style and emotional honesty. Artwork 4 perfectly encapsulates his love for the beauty of everyday life.",
-      year: "Year 4",
-      link: "https://github.com/theringsofsaturn/4",
-    },
+},
+{
+  imgSrc: "shoes/4.jpg",
+  width: 5,
+  height: 3,
+  position: { x: 15, y: 2, z: -19.5 },
+  rotationY: 0,
+  info: {
+    title: "Chuck Taylor All Star",
+    brand: "Converse",
+    description:
+      "The Converse Chuck Taylor All Star is a legendary sneaker known for its distinctive design and versatility, making it a staple in casual footwear.",
+    price: "$55",
+    link: "https://www.converse.com/chuck-taylor-all-star",
   },
-  // Back Wall
-  {
-    imgSrc: "artworks/5.jpg",
-    width: 5,
-    height: 3,
-    position: { x: -15, y: 2, z: 19.5 },
-    rotationY: Math.PI,
-    info: {
-      title: "Van Gogh 5",
-      artist: "Vincent van Gogh",
-      description:
-        "Artwork 5 by Vincent van Gogh is an exceptional piece showcasing his remarkable ability to capture emotion and atmosphere.",
-      year: "Year 5",
-      link: "https://github.com/theringsofsaturn/5",
-    },
+},
+// Back Wall
+{
+  imgSrc: "shoes/5.jpg",
+  width: 5,
+  height: 3,
+  position: { x: -15, y: 2, z: 19.5 },
+  rotationY: Math.PI,
+  info: {
+    title: "Gel-Kayano 27",
+    brand: "ASICS",
+    description:
+      "The ASICS Gel-Kayano 27 is a high-performance running shoe that offers superior cushioning and stability, perfect for long-distance runs.",
+    price: "$160",
+    link: "https://www.asics.com/gel-kayano-27",
   },
-  {
-    imgSrc: "artworks/6.jpg",
-    width: 5,
-    height: 3,
-    position: { x: -5, y: 2, z: 19.5 },
-    rotationY: Math.PI,
-    info: {
-      title: "Van Gogh 6",
-      artist: "Vincent van Gogh",
-      description:
-        "Artwork 6 by Vincent van Gogh is an exceptional piece showcasing his remarkable ability to capture emotion and atmosphere.",
-      year: "Year 6",
-      link: "https://github.com/theringsofsaturn/6",
-    },
+},
+{
+  imgSrc: "shoes/6.jpg",
+  width: 5,
+  height: 3,
+  position: { x: -5, y: 2, z: 19.5 },
+  rotationY: Math.PI,
+  info: {
+    title: "Pegasus 37",
+    brand: "Nike",
+    description:
+      "The Nike Pegasus 37 is a versatile running shoe that provides excellent cushioning and a responsive ride, suitable for both casual and serious runners.",
+    price: "$120",
+    link: "https://www.nike.com/pegasus-37",
   },
-  {
-    imgSrc: "artworks/7.jpg",
-    width: 5,
-    height: 3,
-    position: { x: 5, y: 2, z: 19.5 },
-    rotationY: Math.PI,
-    info: {
-      title: "Van Gogh 7",
-      artist: "Vincent van Gogh",
-      description:
-        "Artwork 7 by Vincent van Gogh is an exceptional piece showcasing his remarkable ability to capture emotion and atmosphere.",
-      year: "Year 7",
-      link: "https://github.com/theringsofsaturn/7",
-    },
+},
+{
+  imgSrc: "shoes/7.jpg",
+  width: 5,
+  height: 3,
+  position: { x: 5, y: 2, z: 19.5 },
+  rotationY: Math.PI,
+  info: {
+    title: "Gazelle",
+    brand: "Adidas",
+    description:
+      "The Adidas Gazelle is a classic sneaker that combines vintage style with modern comfort, featuring a suede upper and rubber outsole.",
+    price: "$90",
+    link: "https://www.adidas.com/gazelle",
   },
-  {
-    imgSrc: "artworks/8.jpg",
-    width: 5,
-    height: 3,
-    position: { x: 15, y: 2, z: 19.5 },
-    rotationY: Math.PI,
-    info: {
-      title: "Van Gogh 8",
-      artist: "Vincent van Gogh",
-      description:
-        "Artwork 8 by Vincent van Gogh is an exceptional piece showcasing his remarkable ability to capture emotion and atmosphere.",
-      year: "Year 8",
-      link: "https://github.com/theringsofsaturn/8",
-    },
+},
+{
+  imgSrc: "shoes/8.jpg",
+  width: 5,
+  height: 3,
+  position: { x: 15, y: 2, z: 19.5 },
+  rotationY: Math.PI,
+  info: {
+    title: "Sk8-Hi",
+    brand: "Vans",
+    description:
+      "The Vans Sk8-Hi is a high-top skate shoe that offers durability and support, with a canvas and suede upper and signature waffle outsole.",
+    price: "$65",
+    link: "https://www.vans.com/sk8-hi",
   },
-  // Left Wall
-  {
-    imgSrc: "artworks/9.jpg",
-    width: 5,
-    height: 3,
-    position: { x: -19.5, y: 2, z: -15 },
-    rotationY: Math.PI / 2,
-    info: {
-      title: "Van Gogh 9",
-      artist: "Vincent van Gogh",
-      description:
-        "With its striking use of color and brushwork, Artwork 9 is a testament to Van Gogh's artistic genius.",
-      year: "Year 9",
-      link: "https://github.com/theringsofsaturn/9",
-    },
+},
+// Left Wall
+{
+  imgSrc: "shoes/9.jpg",
+  width: 5,
+  height: 3,
+  position: { x: -19.5, y: 2, z: -15 },
+  rotationY: Math.PI / 2,
+  info: {
+    title: "New Balance 990v5",
+    brand: "New Balance",
+    description:
+      "The New Balance 990v5 is a premium running shoe that combines comfort, stability, and style, featuring a blend of suede and mesh in the upper.",
+    price: "$175",
+    link: "https://www.newbalance.com/990v5",
   },
-  {
-    imgSrc: "artworks/10.jpg",
-    width: 5,
-    height: 3,
-    position: { x: -19.5, y: 2, z: -5 },
-    rotationY: Math.PI / 2,
-    info: {
-      title: "Van Gogh 10",
-      artist: "Vincent van Gogh",
-      description:
-        "With its striking use of color and brushwork, Artwork 10 is a testament to Van Gogh's artistic genius.",
-      year: "Year 10",
-      link: "https://github.com/theringsofsaturn/10",
-    },
+},
+{
+  imgSrc: "shoes/10.jpg",
+  width: 5,
+  height: 3,
+  position: { x: -19.5, y: 2, z: -5 },
+  rotationY: Math.PI / 2,
+  info: {
+    title: "Clyde",
+    brand: "Puma",
+    description:
+      "The Puma Clyde is a retro basketball shoe that offers a blend of style and performance, with a leather upper and classic design.",
+    price: "$85",
+    link: "https://www.puma.com/clyde",
   },
-  {
-    imgSrc: "artworks/11.jpg",
-    width: 5,
-    height: 3,
-    position: { x: -19.5, y: 2, z: 5 },
-    rotationY: Math.PI / 2,
-    info: {
-      title: "Van Gogh 11",
-      artist: "Vincent van Gogh",
-      description:
-        "With its striking use of color and brushwork, Artwork 11 is a testament to Van Gogh's artistic genius.",
-      year: "Year 11",
-      link: "https://github.com/theringsofsaturn/11",
-    },
+},
+{
+  imgSrc: "shoes/11.jpg",
+  width: 5,
+  height: 3,
+  position: { x: -19.5, y: 2, z: 5 },
+  rotationY: Math.PI / 2,
+  info: {
+    title: "Air Force 1",
+    brand: "Nike",
+    description:
+      "The Nike Air Force 1 is a classic sneaker that has been a staple in fashion and streetwear for decades, featuring a durable leather upper and Nike Air cushioning.",
+    price: "$100",
+    link: "https://www.nike.com/air-force-1",
   },
-  {
-    imgSrc: "artworks/12.jpg",
-    width: 5,
-    height: 3,
-    position: { x: -19.5, y: 2, z: 15 },
-    rotationY: Math.PI / 2,
-    info: {
-      title: "Van Gogh 12",
-      artist: "Vincent van Gogh",
-      description:
-        "With its striking use of color and brushwork, Artwork 12 is a testament to Van Gogh's artistic genius.",
-      year: "Year 12",
-      link: "https://github.com/theringsofsaturn/12",
-    },
+},
+{
+  imgSrc: "shoes/12.jpg",
+  width: 5,
+  height: 3,
+  position: { x: -19.5, y: 2, z: 15 },
+  rotationY: Math.PI / 2,
+  info: {
+    title: "Superstar",
+    brand: "Adidas",
+    description:
+      "The Adidas Superstar is an iconic sneaker known for its distinctive shell-toe design and timeless style, perfect for both casual and athletic wear.",
+    price: "$85",
+    link: "https://www.adidas.com/superstar",
   },
-  // Right Wall
-  {
-    imgSrc: "artworks/13.jpg",
-    width: 5,
-    height: 3,
-    position: { x: 19.5, y: 2, z: -15 },
-    rotationY: -Math.PI / 2,
-    info: {
-      title: "Van Gogh 13",
-      artist: "Vincent van Gogh",
-      description:
-        "Artwork 13 is a captivating piece by Vincent van Gogh, reflecting his distinctive style and deep passion for art.",
-      year: "Year 13",
-      link: "https://github.com/theringsofsaturn/13",
-    },
+},
+// Right Wall
+{
+  imgSrc: "shoes/13.jpg",
+  width: 5,
+  height: 3,
+  position: { x: 19.5, y: 2, z: -15 },
+  rotationY: -Math.PI / 2,
+  info: {
+    title: "Gel-Lyte III",
+    brand: "ASICS",
+    description:
+      "The ASICS Gel-Lyte III is a retro running shoe that offers a unique split-tongue design and exceptional comfort, ideal for everyday wear.",
+    price: "$110",
+    link: "https://www.asics.com/gel-lyte-iii",
   },
-  {
-    imgSrc: "artworks/14.jpg",
-    width: 5,
-    height: 3,
-    position: { x: 19.5, y: 2, z: -5 },
-    rotationY: -Math.PI / 2,
-    info: {
-      title: "Van Gogh 14",
-      artist: "Vincent van Gogh",
-      description:
-        "Artwork 14 is a captivating piece by Vincent van Gogh, reflecting his distinctive style and deep passion for art.",
-      year: "Year 14",
-      link: "https://github.com/theringsofsaturn/14",
-    },
-  },
-  {
-    imgSrc: "artworks/15.jpg",
-    width: 5,
-    height: 3,
-    position: { x: 19.5, y: 2, z: 5 },
-    rotationY: -Math.PI / 2,
-    info: {
-      title: "Van Gogh 15",
-      artist: "Vincent van Gogh",
-      description:
-        "Artwork 15 is a captivating piece by Vincent van Gogh, reflecting his distinctive style and deep passion for art.",
-      year: "Year 15",
-      link: "https://github.com/theringsofsaturn/15",
-    },
-  },
-  {
-    imgSrc: "artworks/16.jpg",
-    width: 5,
-    height: 3,
-    position: { x: 19.5, y: 2, z: 15 },
-    rotationY: -Math.PI / 2,
-    info: {
-      title: "Van Gogh 16",
-      artist: "Vincent van Gogh",
-      description:
-        "Artwork 16 is a captivating piece by Vincent van Gogh, reflecting his distinctive style and deep passion for art.",
-      year: "Year 16",
-      link: "https://github.com/theringsofsaturn/16",
-    },
-  },
+},
+
 ];
 
 console.log(paintingData);
